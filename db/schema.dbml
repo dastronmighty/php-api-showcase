@@ -1,0 +1,66 @@
+// db/schema.dbml
+
+Table "users" {
+  "id" integer [pk, increment]
+  "username" varchar(255) [unique]
+  "email" varchar(255) [unique]
+  "password" varchar(255) [unique]
+  "created_at" timestamp [default: `now()`]
+}
+
+Table "posts" {
+  "id" integer [pk, increment]
+  "title" varchar(255)
+  "body" text [note: 'Content of the post']
+  "user_id" integer
+  "created_at" timestamp [default: `now()`]
+  "updated_times" integer
+  "updated_at" timestamp [default: `now()`]
+}
+
+Table "comments" {
+  "id" integer [pk, increment]
+  "user_id" integer
+  "post_id" integer
+  "reply_to" integer
+  "body" text [note: 'Content of the comment']
+  "created_at" timestamp [default: `now()`]
+  "updated_times" integer
+  "updated_at" timestamp [default: `now()`]
+}
+
+Table "likes" {
+  "post_id" integer
+  "user_id" integer
+  "liked_at" timestamp [default: `now()`]
+
+Indexes {
+  (post_id, user_id) [pk]
+}
+}
+
+Table "follows" {
+  "following_user_id" integer
+  "followed_user_id" integer
+  "created_at" timestamp [default: `now()`]
+
+Indexes {
+  (following_user_id, followed_user_id) [pk]
+}
+}
+
+Ref: "users"."id" < "posts"."user_id"
+
+Ref: "users"."id" < "comments"."user_id"
+
+Ref: "posts"."id" < "comments"."post_id"
+
+Ref: "comments"."id" < "comments"."reply_to"
+
+Ref: "posts"."id" < "likes"."post_id"
+
+Ref: "users"."id" < "likes"."user_id"
+
+Ref: "users"."id" < "follows"."following_user_id"
+
+Ref: "users"."id" < "follows"."followed_user_id"
