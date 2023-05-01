@@ -223,3 +223,357 @@
 [2023-05-01 18:58:41] - 127.0.0.1 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15 - (Router.php) MESSAGE: Handle GET on /
 [2023-05-01 18:58:41] - 127.0.0.1 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid and replace with (?P<$1>[\w-]+)
 [2023-05-01 18:58:41] - 127.0.0.1 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w-]+)$#
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uidname with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: PUT to /api/users/justeoghan
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:uid":{}}
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle PUT on /api/users/justeoghan
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w-]+)$#
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/justeoghan -> #^/api/users/(?P<uid>[\w-]+)$# matches
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"justeoghan"}
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: PUT with id 0
+[2023-05-01 21:23:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Querying DB: UPDATE users SET username = ? WHERE id = ?
+[2023-05-01 21:23:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Query succeeded: UPDATE users SET username = ? WHERE id = ?
+[2023-05-01 21:23:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Error: handleUpdateUser 500: Failed to update user
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uidname with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/justeoghan
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:uidname":{}}
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/justeoghan
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uidname and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uidname>[\w-]+)$#
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/justeoghan -> #^/api/users/(?P<uidname>[\w-]+)$# matches
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uidname":"justeoghan"}
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: GET with id 0
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserModel.php) MESSAGE: Getting User : 0
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Querying DB: SELECT * FROM users WHERE id = ?
+[2023-05-01 21:23:58] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Query succeeded: SELECT * FROM users WHERE id = ?
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uidname with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/justeoghan
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:uidname":{}}
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/justeoghan
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uidname and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uidname>[\w-]+)$#
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/justeoghan -> #^/api/users/(?P<uidname>[\w-]+)$# matches
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uidname":"justeoghan"}
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: GET with username justeoghan
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserModel.php) MESSAGE: Getting User : justeoghan
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Querying DB: SELECT * FROM users WHERE username = ?
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Query succeeded: SELECT * FROM users WHERE username = ?
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: New User Class with ID = 33
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details as json
+[2023-05-01 21:24:23] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uidname with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:uidname":{}}
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uidname and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:27:53] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uidname>[\w-]+)$#
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:28:22] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w-]+)$#
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:28:54] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w-]+)$#
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:28:55] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w-]+)$#
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w-]+)
+[2023-05-01 21:29:12] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w-]+)$#
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/eoghanthehogan@gmail.com -> #^/api/users/(?P<param>[\w\.\@-]+)$# matches
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"param":"eoghanthehogan@gmail.com"}
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: GET with email eoghanthehogan@gmail.com
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserModel.php) MESSAGE: Getting User : eoghanthehogan@gmail.com
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Querying DB: SELECT * FROM users WHERE email = ?
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Query succeeded: SELECT * FROM users WHERE email = ?
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: New User Class with ID = 33
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details as json
+[2023-05-01 21:31:13] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{}}
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/eoghanthehogan@gmail.com
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/eoghanthehogan@gmail.com -> #^/api/users/(?P<param>[\w\.\@-]+)$# matches
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"param":"eoghanthehogan@gmail.com"}
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: GET with email eoghanthehogan@gmail.com
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserModel.php) MESSAGE: Getting User : eoghanthehogan@gmail.com
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Querying DB: SELECT * FROM users WHERE email = ?
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: Query succeeded: SELECT * FROM users WHERE email = ?
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: New User Class with ID = 33
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details as json
+[2023-05-01 21:33:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (User.php) MESSAGE: Getting user 33 details
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:param\/follows":{},"\/api\/users\/:param\/likes":{},"\/api\/users\/:param\/posts":{},"\/api\/users\/:param\/comments":{}}
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)/follows$#
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<param>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:40:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"param":"33"}
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:param\/follows":{},"\/api\/users\/:param\/likes":{},"\/api\/users\/:param\/posts":{},"\/api\/users\/:param\/comments":{}}
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)/follows$#
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<param>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:40:43] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"param":"33"}
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:param\/follows":{},"\/api\/users\/:param\/likes":{},"\/api\/users\/:param\/posts":{},"\/api\/users\/:param\/comments":{}}
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)/follows$#
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<param>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"param":"33"}
+[2023-05-01 21:43:18] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:43:36] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:44:52] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:45:03] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/posts
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/posts
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/likes and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/likes$#
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/posts and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/posts$#
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/posts -> #^/api/users/(?P<uid>[\w\.\@-]+)/posts$# matches
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:45:07] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Posts
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/posts
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/posts
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/likes and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/likes$#
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/posts and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/posts$#
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/posts -> #^/api/users/(?P<uid>[\w\.\@-]+)/posts$# matches
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:46:37] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Posts
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:47:31] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:47:49] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (DB.php) MESSAGE: New database created: test_api
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:param with handler Closure in UserRoutes.php from line 24 to line 26
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/follows with handler Closure in UserRoutes.php from line 28 to line 30
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/likes with handler Closure in UserRoutes.php from line 32 to line 34
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/posts with handler Closure in UserRoutes.php from line 36 to line 38
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating GET Route api/users/:uid/comments with handler Closure in UserRoutes.php from line 40 to line 42
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating POST Route api/users with handler Closure in UserRoutes.php from line 44 to line 46
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating PUT Route api/users/:uid with handler Closure in UserRoutes.php from line 48 to line 50
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Creating DELETE Route api/users/:uid with handler Closure in UserRoutes.php from line 52 to line 54
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (api.php) MESSAGE: GET to /api/users/33/follows
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Routes for method {"\/api\/users\/:param":{},"\/api\/users\/:uid\/follows":{},"\/api\/users\/:uid\/likes":{},"\/api\/users\/:uid\/posts":{},"\/api\/users\/:uid\/comments":{}}
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Handle GET on /api/users/33/follows
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:param and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<param>[\w\.\@-]+)$#
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: find pattern #:([\w]+)# in /api/users/:uid/follows and replace with (?P<$1>[\w\.\@-]+)
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: New Pattern is #^/api/users/(?P<uid>[\w\.\@-]+)/follows$#
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: /api/users/33/follows -> #^/api/users/(?P<uid>[\w\.\@-]+)/follows$# matches
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (Router.php) MESSAGE: Params found {"uid":"33"}
+[2023-05-01 21:48:10] - 127.0.0.1 - PostmanRuntime/7.29.2 - (UserRoutes.php) MESSAGE: Handling Get User Follows

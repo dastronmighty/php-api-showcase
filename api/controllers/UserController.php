@@ -10,8 +10,16 @@ class UserController {
     $this->model = new UserModel();
   }
 
-  public function getUserByID($userId) : string {
+  public function getUserByID(int $userId) : string {
     return $this->model->getUserById($userId);
+  }
+
+  public function getUserByUsername(string $username) : string {
+    return $this->model->getUserByUsername($username);
+  }
+
+  public function getUserByEmail(string $email) : string {
+    return $this->model->getUserByEmail($email);
   }
 
   public function createUser(string $username,

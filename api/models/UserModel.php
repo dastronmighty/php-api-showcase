@@ -39,6 +39,54 @@ class UserModel {
         }
     }
 
+    public function getUserByUsername(string $username) : string {
+        $this->logger->logEvent("Getting User : $username");
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $params = [$username];
+        try {
+            $result = $this->db->queryDatabase($sql, $params);
+            if ($result) {
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                $user = new User($row['id'], 
+                                $row['username'], 
+                                $row['email'], 
+                                $row['first_name'], 
+                                $row['last_name'], 
+                                $row['created_at']);
+                return $user->getUserDetailsJSON();
+            } else {
+                return json_encode((object)[]);
+            }
+        } catch (PDOException $e) {
+            $response = ErrorHandler::handlePDOError($e, $this->logger);
+            return $response;
+        }
+    }
+
+    public function getUserByEmail(string $email) : string {
+        $this->logger->logEvent("Getting User : $email");
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $params = [$email];
+        try {
+            $result = $this->db->queryDatabase($sql, $params);
+            if ($result) {
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                $user = new User($row['id'], 
+                                $row['username'], 
+                                $row['email'], 
+                                $row['first_name'], 
+                                $row['last_name'], 
+                                $row['created_at']);
+                return $user->getUserDetailsJSON();
+            } else {
+                return json_encode((object)[]);
+            }
+        } catch (PDOException $e) {
+            $response = ErrorHandler::handlePDOError($e, $this->logger);
+            return $response;
+        }
+    }
+
     public function createUser(string $username,
                                string $email,
                                string $password,

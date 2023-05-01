@@ -32,7 +32,8 @@ class User {
     function getUserDetails() : array {
         $this->logger->logEvent("Getting user $this->id details");
         try {
-            $user_details_array = array('username' => $this->username, 
+            $user_details_array = array('id'=>$this->id,
+                                        'username' => $this->username, 
                                         'email' => $this->email,
                                         'first_name' => $this->first_name,
                                         'last_name' => $this->last_name,

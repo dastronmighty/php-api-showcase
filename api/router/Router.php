@@ -63,7 +63,6 @@ class Router {
         }
     }
 
-
     public function handleRequest(string $method, string $path) : Response {
         $routesForMethod = match($method) {
             'GET' => $this->getRoutes,
@@ -89,7 +88,7 @@ class Router {
 
     private function matchPattern(string $pattern, string $path, array &$params) : bool {
         $replace_pattern = '#:([\w]+)#';
-        $replace = '(?P<$1>[\w-]+)';
+        $replace = '(?P<$1>[\w\.\@-]+)';
         $this->logger->logEvent("find pattern $replace_pattern in $pattern and replace with $replace");
         $pattern = preg_replace($replace_pattern, $replace, $pattern);
         $pattern = "#^$pattern$#";
