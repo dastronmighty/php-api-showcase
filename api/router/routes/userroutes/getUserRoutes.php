@@ -1,6 +1,9 @@
 <?php declare(strict_types=1);
 // api/roter/routes/userroutes/getUserRoutes.php
 
+include_once(__DIR__ . "/../../../controllers/UserController.php");
+include_once(__DIR__ . "/../../../classes/Response.php");
+
 function handleGetUserById(array $params, Logger $logger, UserController $userController) : Response {
     $userId = intval($params['param']);
     $logger->logEvent("GET with id $userId");

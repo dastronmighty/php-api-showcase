@@ -3,14 +3,16 @@
 
 include_once(__DIR__ . '/../config/DB.php');
 include_once(__DIR__ . '/../logging/Logger.php');
-include_once(__DIR__ . '/router/routes/UserRoutes.php');
 include_once(__DIR__ . '/classes/Response.php');
 include_once(__DIR__ . '/router/Router.php');
+include_once(__DIR__ . '/router/routes/UserRoutes.php');
+include_once(__DIR__ . '/router/routes/PostRoutes.php');
 
 function handleRequest() {
     $router = new Router("api");
 
     registerUserRoutes($router);
+    registerPostRoutes($router);
 
     $logger = new Logger("api.php");
     $requestMethod = $_SERVER['REQUEST_METHOD'];
